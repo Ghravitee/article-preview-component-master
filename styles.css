@@ -218,14 +218,7 @@ body {
 }
 
 .hover-div {
-  background-color: var(--Very-Dark-Grayish-Blue);
-  display: grid;
-  grid-template-columns: 0.4fr 0.6fr;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem 1.9rem;
-  width: 50%;
-  border-radius: 0.8rem;
+display: none;
 }
 
 .hover-div p {
@@ -327,6 +320,14 @@ body {
     position: absolute;
     right: -70px;
     bottom: 85px;
+    background-color: var(--Very-Dark-Grayish-Blue);
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 1.9rem;
+    width: 50%;
+    border-radius: 0.8rem;
   }
 
   .hover-div p {

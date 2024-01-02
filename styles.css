@@ -1,0 +1,363 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+  --ff-primary: "Manrope", sans-serif;
+
+  --br: 1rem;
+}
+
+/* For box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Removes default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* List elements */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/*  root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Default styles for elements that do not have a class*/
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Global styling for images*/
+img,
+picture {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+/* inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+ul {
+  padding-left: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Light-Grayish-Blue);
+  padding: 7rem 2rem;
+  font-family: var(--ff-primary);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.drawers {
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+}
+
+.container-text {
+  gap: 1.5rem;
+  background-color: white;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  transform: translateY(-14%);
+}
+
+.first-container {
+  padding: 2rem 1.9rem .5rem;
+}
+
+.container-text-heading {
+  font-size: 0.93rem;
+  font-weight: 700;
+  color: var(--Very-Dark-Grayish-Blue);
+  margin-bottom: 1rem;
+}
+
+.container-text-paragraph {
+  color: var(--Desaturated-Dark-Blue);
+  font-size: 0.78rem;
+  font-weight: 500;
+}
+
+.user {
+  display: grid;
+  grid-template-columns: 0.2fr 0.6fr 0.2fr;
+  padding: 1rem 1.9rem;
+}
+
+.user-name {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+.user-date {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--Desaturated-Dark-Blue);
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.share-container {
+  padding: 1rem;
+  background-color: var(--Light-Grayish-Blue);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  justify-self: end;
+  align-self: center;
+  cursor: pointer;
+}
+
+.share {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+}
+
+.second-div {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  display: grid;
+  grid-template-columns: 0.3fr 0.6fr 0.1fr;
+  justify-content: space-between;
+  align-items: center;
+  display: none;
+  padding: 1rem 1.9rem;
+}
+
+.second-div p {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--Light-Grayish-Blue);
+  opacity: 0.4;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.facebook,
+.twitter,
+.pinterest {
+  width: 20px;
+  height: 20px;
+}
+
+.hover-div {
+  background-color: var(--Very-Dark-Grayish-Blue);
+  display: grid;
+  grid-template-columns: 0.4fr 0.6fr;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1.9rem;
+  width: 50%;
+  border-radius: 0.8rem;
+}
+
+.hover-div p {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--Light-Grayish-Blue);
+  opacity: 0.4;
+}
+
+/* MEDIA QUERIES MIN-WIDTH: 376PX */
+/* MEDIA QUERIES MIN-WIDTH: 376PX */
+/* MEDIA QUERIES MIN-WIDTH: 376PX */
+@media (min-width: 480px) {
+  .container-text-heading {
+    font-size: 1.1rem;
+  }
+
+  .container-text-paragraph {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: none;
+  }
+
+  .user {
+    display: grid;
+    grid-template-columns: 0.1fr 0.8fr 0.1fr;
+  }
+
+  .container-text-heading {
+    font-size: 1.2rem;
+  }
+
+  .container-text-paragraph {
+    font-size: 1rem;
+  }
+
+  .user-name,
+  .user-date {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 40rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding: 9rem;
+  }
+
+  .container {
+    max-width: 50rem;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .container-text {
+    position: relative;
+  }
+
+  .container-text-heading {
+    font-size: 1.5rem;
+  }
+
+  .container-text-paragraph {
+    font-size: 0.9rem;
+  }
+
+  .drawers {
+    width: 40%;
+    border-radius: 0.8rem 0 0 0.8rem;
+  }
+
+  .container-text {
+    width: 60%;
+    transform: translateY(0);
+    border-radius: 0 0.8rem 0.8rem 0;
+  }
+
+  .share {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+  }
+
+  .user {
+    gap: 15px;
+  }
+
+  .hover-div {
+    position: absolute;
+    right: -70px;
+    bottom: 85px;
+  }
+
+  .hover-div p {
+    font-size: .8rem;
+  }
+
+  .hover-div .socials {
+    gap: 1.2rem;
+  }
+
+  .hover-div:after,
+  .hover-div:before {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  .hover-div:after {
+    border-color: transparent;
+    border-top-color: var(--Very-Dark-Grayish-Blue);
+    border-width: 10px;
+    margin-left: -5px;
+  }
+  .hover-div:before {
+    border-color: rgba(0, 0, 51, 0);
+    border-top-color: #003;
+    border-width: 10px;
+    margin-left: -6px;
+  }
+}
